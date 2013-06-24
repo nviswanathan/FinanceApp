@@ -14,6 +14,8 @@ using System.Data.EntityClient;
 using System.ComponentModel;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
+using System.Linq;
+using System.Collections.Generic;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -951,7 +953,7 @@ namespace FinanceApp.Data
     public partial class Loan : EntityObject
     {
         #region Factory Method
-    
+        public static FinanceAppEntities entity = new FinanceAppEntities();
         /// <summary>
         /// Create a new Loan object.
         /// </summary>
@@ -977,12 +979,72 @@ namespace FinanceApp.Data
             return loan;
         }
 
+        public static int getLoanMaxID()
+        {
+            Loan loan = entity.Loans.OrderByDescending(u => u.id).FirstOrDefault();
+            if (loan != null)
+            {
+                return loan.id;
+            }
+            return 0;
+        }
+
+        public static IList<Loan> getUserLoanDetails(User user)
+        {
+            IList<Loan> loans;
+            var loanquery = from loan in entity.Loans
+                            where loan.user_id == user.id
+                            select loan;
+            loans = loanquery.ToList<Loan>();
+            return loans;
+        }
+
+        public static void saveLoan(int user_id,
+            int authrized_user_id,
+            int surity_id,
+            int intrest,
+            int amount,
+            bool status,
+            int loan_type,
+            DateTime startdate,
+            DateTime enddate,
+            int period = 0,
+            DateTime duedate = new DateTime())
+        {
+            Loan loan = new Loan();
+            loan.intrest = intrest;
+            loan.amoutn = amount;
+            loan.status = status;
+            loan.user_id = user_id;
+            loan.approved = authrized_user_id;
+            loan.startdate = startdate;
+            loan.enddate = enddate;
+            loan.loantype_id = loan_type;
+            entity.AddToLoans(loan);
+            if (loan_type == 1)
+            {
+                DailyIntrest dailyIntrest = new DailyIntrest();
+                dailyIntrest.loan_id = loan.id;
+                dailyIntrest.surety = surity_id;
+                entity.AddToDailyIntrests(dailyIntrest);
+            }
+            else
+            {
+                Finance finance = new Finance();
+                finance.duedate = duedate;
+                finance.loan_id = loan.id;
+                finance.period = period;
+                entity.AddToFinances(finance);
+            }
+            entity.SaveChanges();
+        }
         #endregion
         #region Primitive Properties
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [System.ComponentModel.DisplayName("Loan Number") ]
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 id
@@ -1723,7 +1785,8 @@ namespace FinanceApp.Data
     public partial class User : EntityObject
     {
         #region Factory Method
-    
+
+        public static FinanceAppEntities entity = new FinanceAppEntities();
         /// <summary>
         /// Create a new User object.
         /// </summary>
@@ -1741,6 +1804,46 @@ namespace FinanceApp.Data
             user.presentaddr = presentaddr;
             user.role = role;
             return user;
+        }
+
+        /// < summary>
+        /// Methods for handaling the user details
+        /// </summary>
+        public static IList<User> getAllUsers()
+        {
+            var users = from user in entity.Users
+                        select user;
+            IList<User> courseList = users.ToList<User>();
+            return courseList;
+        }
+
+        /// < summary>
+        /// Mehod to Save user details 
+        /// </summary>
+        public static void saveUser(string address,
+            string name,
+            string occupation,
+            int phone,
+            int income,
+            int limit,
+            string email,
+            string role = "User")
+        {
+            Data.Address adds = new Data.Address();
+            User user = new User();
+            adds.address1 = address;
+            entity.AddToAddresses(adds);
+            user.name = name;
+            user.occupation = occupation;
+            user.phone = phone;
+            user.presentaddr = adds.id;
+            user.permenentaddr = adds.id;
+            user.income = income;
+            user.limit = limit;
+            user.email = email;
+            user.role = role;
+            entity.AddToUsers(user);
+            entity.SaveChanges();
         }
 
         #endregion
@@ -2160,6 +2263,9 @@ namespace FinanceApp.Data
         }
 
         #endregion
+
+
+
     }
 
     #endregion

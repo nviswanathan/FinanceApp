@@ -9,57 +9,55 @@ using System.Windows.Forms;
 
 namespace FinanceApp
 {
-    public partial class DailyIntrest : UserControl
+    public partial class Finance : UserControl
     {
-        public FinanceApp.Data.FinanceAppEntities entity = Program.entity;
-        public FinanceApp.Data.User user;
-        public DailyIntrest()
+        public Finance()
         {
             InitializeComponent();
             setUserCombo(Data.User.getAllUsers());
             setAuthorized(Data.User.getAllUsers());
-            txtloan.Text = Data.Loan.getLoanMaxID().ToString();
+            txtloannumber.Text = Data.Loan.getLoanMaxID().ToString();
         }
 
         private void setUserCombo(IList<Data.User> users)
         {
-            cbUser.DataSource = users;
-            cbUser.DisplayMember = "name";
-            cbUser.ValueMember = "id";
+            cbuser.DataSource = users;
+            cbuser.DisplayMember = "name";
+            cbuser.ValueMember = "id";
         }
 
         private void setAuthorized(IList<Data.User> users)
         {
 
-            cbAutherized.DataSource = users;
-            cbAutherized.DisplayMember = "name";
-            cbAutherized.ValueMember = "id";
+            cbautherized.DataSource = users;
+            cbautherized.DisplayMember = "name";
+            cbautherized.ValueMember = "id";
         }
 
-        private void textLimit_KeyPress(object sender, KeyPressEventArgs arg)
+        private void text_KeyPress(object sender, KeyPressEventArgs arg)
         {
             const char Delete = (char)8;
             arg.Handled = !Char.IsDigit(arg.KeyChar) && arg.KeyChar != Delete;
         }
-
         private void cbUser_SelectedIndexChanged(object sender, EventArgs e)
         {
             Data.User user = (Data.User)((ComboBox)sender).SelectedItem;
             IList<Data.Loan> loans = Data.Loan.getUserLoanDetails(user);
             userLoanDetails.DataSource = loans;
         }
-
         private void btnsave_Click(object sender, EventArgs e)
         {
+          
             int intrest = txtintrest.Text == "" ? Convert.ToInt32(txtintrest.Text) : 0;
             int amount = txtamount.Text == "" ? Convert.ToInt32(txtamount.Text) : 0;
-            int user_id = ((Data.User)cbUser.SelectedItem).id;
-            int approved = Convert.ToInt32(cbAutherized.SelectedValue);
-            DateTime startdata = Convert.ToDateTime(dateTimePicker1.Value);
-            DateTime enddate = DateTime.Now;
-            int surety_user_id = Convert.ToInt32(cbAutherized.SelectedValue);
+            int user_id = ((Data.User)cbuser.SelectedItem).id;
+            int approved = Convert.ToInt32(cbautherized.SelectedValue);
+            DateTime startdata = Convert.ToDateTime(dpstartdate.Value);
+            DateTime enddate = Convert.ToDateTime(dpenddate.Value);
+            int period = txtperiod.Text == "" ? Convert.ToInt32(txtperiod.Text) : 0;
+            int surety_user_id = Convert.ToInt32(cbautherized.SelectedValue);
             int authorized_user_id = surety_user_id;
-            Data.Loan.saveLoan(user_id, authorized_user_id, surety_user_id, intrest, amount, true, 1, startdata, enddate);
+            Data.Loan.saveLoan(user_id, authorized_user_id, surety_user_id, intrest, amount, true, 2, startdata, enddate, period, enddate);
 
         }
     }

@@ -14,6 +14,7 @@ namespace FinanceApp
         UserControl ActiveControl = null;
         RegistrationForm registration = new RegistrationForm();
         DailyIntrest dailyintest = new DailyIntrest();
+        Finance finance;
         public MainWindow()
         {
             InitializeComponent();
@@ -53,6 +54,19 @@ namespace FinanceApp
             ActiveControl = dailyintest;
             ActiveControl.Dock = DockStyle.Fill;
             dailyintest.Show();
+        }
+
+        private void financeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hideActiveControl();
+            if ( finance == null)
+            {
+                finance = new Finance();
+                containerpane.Controls.Add(finance);
+            }
+            ActiveControl = finance;
+            ActiveControl.Dock = DockStyle.Fill;
+            ActiveControl.Show();
         }
     }
 }

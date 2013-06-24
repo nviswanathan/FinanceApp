@@ -11,9 +11,6 @@ namespace FinanceApp
 {
     public partial class RegistrationForm : UserControl
     {
-        public FinanceApp.Data.FinanceAppEntities entity = Program.entity;
-        public FinanceApp.Data.Address adds;
-        public FinanceApp.Data.User user;
         public RegistrationForm()
         {
             InitializeComponent();
@@ -30,50 +27,28 @@ namespace FinanceApp
         public void showUserDetails()
         {
             splitContainer.Hide();
-            var users = from user in entity.Users
-                                    select user;
-            IList<Data.User> courseList = users.ToList<Data.User>();
-            setGridData(courseList);
+            IList<Data.User> userList = Data.User.getAllUsers();
+            setGridData(userList);
             detailsPanel.Show();
 
         }
         private void btncancel_Click(object sender, EventArgs e)
         {
-
             this.Hide();
         }
-
+        
         private void btnregister_Click(object sender, EventArgs e)
         {
             Validate();
-            adds = new Data.Address();
-            user = new Data.User();
-            adds.address1 = rtxtaddress.Text;
-            entity.AddToAddresses(adds);
-            user.name = txtusername.Text;
-            user.occupation = txtoccupation.Text;
-            if (!string.IsNullOrEmpty(txtphonenumber.Text) )
-            {
-                user.phone = Convert.ToInt32(txtphonenumber.Text);
-            }
-            user.presentaddr = adds.id;
-            user.permenentaddr = adds.id;
-            if (!string.IsNullOrEmpty(txtincome.Text))
-            {
-                user.income = Convert.ToInt32(txtincome.Text);
-            }
-            if (!string.IsNullOrEmpty(txtlimit.Text))
-            {
-                user.limit = Convert.ToInt32(txtlimit.Text);
-            }
-            user.email = txtemail.Text;
-            user.role = "user";
-            entity.AddToUsers(user);
-            entity.SaveChanges();
+            string address = rtxtaddress.Text;
+            string email = txtemail.Text;
+            string name = txtusername.Text;
+            int phone = string.IsNullOrEmpty(txtphonenumber.Text)? 0: Convert.ToInt32(txtphonenumber.Text);
+            int income = string.IsNullOrEmpty(txtincome.Text) ? 1 :  Convert.ToInt32(txtincome.Text);
+            int limit = string.IsNullOrEmpty(txtlimit.Text) ? 500 : Convert.ToInt32(txtlimit.Text);
+            string occupation = txtoccupation.Text;
+            Data.User.saveUser(address, name, occupation, phone, income, limit, email);
             splitContainer.Hide();
-            IList<Data.User> source = new List<Data.User>();
-            source.Add(user);
-            setGridData(source);
             detailsPanel.Show();
         }
 

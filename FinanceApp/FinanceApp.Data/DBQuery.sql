@@ -1,5 +1,6 @@
 ﻿/*Create database Finance;
-
+select * from loan;
+insert into loantype(typename)values("dailyintrest")
 use Finance;
 
 CREATE FUNCTION dbo.chekcTableExist
@@ -64,6 +65,7 @@ enddate datetime not null,
 approved int foreign key references users(id))
 End
 
+Alter table Loan alter column startdate datetime2
 if( dbo.chekcTableExist('DailyIntrest') != 1)
 Begin
 Create table DailyIntrest(

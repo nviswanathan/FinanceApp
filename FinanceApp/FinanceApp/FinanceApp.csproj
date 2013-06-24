@@ -70,6 +70,12 @@
     <Compile Include="DailyIntrest.Designer.cs">
       <DependentUpon>DailyIntrest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Finance.Designer.cs">
+      <DependentUpon>Finance.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="DailyIntrest.resx">
       <DependentUpon>DailyIntrest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance.resx">
+      <DependentUpon>Finance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

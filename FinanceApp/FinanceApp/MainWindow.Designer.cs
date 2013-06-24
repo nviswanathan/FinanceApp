@@ -68,14 +68,14 @@
             // registrationToolStripMenuItem1
             // 
             this.registrationToolStripMenuItem1.Name = "registrationToolStripMenuItem1";
-            this.registrationToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.registrationToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.registrationToolStripMenuItem1.Text = "Registration";
             this.registrationToolStripMenuItem1.Click += new System.EventHandler(this.registrationToolStripMenuItem1_Click);
             // 
             // userDetailsToolStripMenuItem
             // 
             this.userDetailsToolStripMenuItem.Name = "userDetailsToolStripMenuItem";
-            this.userDetailsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.userDetailsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.userDetailsToolStripMenuItem.Text = "User Details";
             this.userDetailsToolStripMenuItem.Click += new System.EventHandler(this.userDetailsToolStripMenuItem_Click);
             // 
@@ -109,6 +109,7 @@
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.financeToolStripMenuItem.Text = "Finance";
+            this.financeToolStripMenuItem.Click += new System.EventHandler(this.financeToolStripMenuItem_Click);
             // 
             // loanDetailsToolStripMenuItem
             // 
