@@ -1,0 +1,12 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp.Data\bin\Debug\FinanceApp.Data.dll.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp.Data\bin\Debug\FinanceApp.Data.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp.Data\bin\Debug\FinanceApp.Data.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp.Data\obj\Debug\FinanceApp.Data.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp.Data\obj\Debug\FinanceApp.Data.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\FinanceApp\FinanceApp\FinanceApp.Data\bin\Debug\FinanceApp.Data.dll.config
+C:\Documents and Settings\Administrator\My Documents\GitHub\FinanceApp\FinanceApp\FinanceApp.Data\bin\Debug\FinanceApp.Data.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\FinanceApp\FinanceApp\FinanceApp.Data\bin\Debug\FinanceApp.Data.pdb
+C:\Documents and Settings\Administrator\My Documents\GitHub\FinanceApp\FinanceApp\FinanceApp.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\GitHub\FinanceApp\FinanceApp\FinanceApp.Data\obj\Debug\FinanceApp.Data.dll
+C:\Documents and Settings\Administrator\My Documents\GitHub\FinanceApp\FinanceApp\FinanceApp.Data\obj\Debug\FinanceApp.Data.pdb

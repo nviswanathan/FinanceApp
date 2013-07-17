@@ -1,0 +1,17 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.DailyIntrest.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.LoginForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.MainWindow.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.RegistrationForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\bin\Debug\FinanceApp.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\bin\Debug\FinanceApp.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\bin\Debug\FinanceApp.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\bin\Debug\FinanceApp.Data.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\bin\Debug\FinanceApp.Data.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\obj\x86\Debug\FinanceApp.Finance.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2010\Projects\FinanceApp\FinanceApp\bin\Debug\WebCam_Capture.dll

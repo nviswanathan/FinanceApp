@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinanceModelStoreContainer" CdmEntityContainer="FinanceAppEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="FinanceModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="address1" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="collections">
+      <EntityTypeMapping TypeName="FinanceModel.collection">
+        <MappingFragment StoreEntitySet="collection">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+          <ScalarProperty Name="collectiondate" ColumnName="collectiondate" />
+          <ScalarProperty Name="amoutn" ColumnName="amoutn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyIntrests">
+      <EntityTypeMapping TypeName="FinanceModel.DailyIntrest">
+        <MappingFragment StoreEntitySet="DailyIntrest">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+          <ScalarProperty Name="surety" ColumnName="surety" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Finances">
+      <EntityTypeMapping TypeName="FinanceModel.Finance">
+        <MappingFragment StoreEntitySet="Finance">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+          <ScalarProperty Name="duedate" ColumnName="duedate" />
+          <ScalarProperty Name="period" ColumnName="period" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Loans">
+      <EntityTypeMapping TypeName="FinanceModel.Loan">
+        <MappingFragment StoreEntitySet="Loan">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="loantype_id" ColumnName="loantype_id" />
+          <ScalarProperty Name="amoutn" ColumnName="amoutn" />
+          <ScalarProperty Name="intrest" ColumnName="intrest" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="startdate" ColumnName="startdate" />
+          <ScalarProperty Name="enddate" ColumnName="enddate" />
+          <ScalarProperty Name="approved" ColumnName="approved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanExtantions">
+      <EntityTypeMapping TypeName="FinanceModel.LoanExtantion">
+        <MappingFragment StoreEntitySet="LoanExtantion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="loan_id" ColumnName="loan_id" />
+          <ScalarProperty Name="extendeddate" ColumnName="extendeddate" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="extracharge" ColumnName="extracharge" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoanTypes">
+      <EntityTypeMapping TypeName="FinanceModel.LoanType">
+        <MappingFragment StoreEntitySet="LoanType">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="typename" ColumnName="typename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="FinanceModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="permenentaddr" ColumnName="permenentaddr" />
+          <ScalarProperty Name="presentaddr" ColumnName="presentaddr" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="occupation" ColumnName="occupation" />
+          <ScalarProperty Name="income" ColumnName="income" />
+          <ScalarProperty Name="limit" ColumnName="limit" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

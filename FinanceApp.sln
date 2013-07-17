@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp", "FinanceApp\FinanceApp.csproj", "{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.Data", "FinanceApp.Data\FinanceApp.Data.csproj", "{37534036-D7D5-43F1-9682-58E397770CDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Debug|x86.ActiveCfg = Debug|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Debug|x86.Build.0 = Debug|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Release|Any CPU.ActiveCfg = Release|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Release|Mixed Platforms.Build.0 = Release|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Release|x86.ActiveCfg = Release|x86
+		{AC8E5955-14FA-44A0-95C0-C3C1B8C64C50}.Release|x86.Build.0 = Release|x86
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{37534036-D7D5-43F1-9682-58E397770CDC}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
